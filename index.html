@@ -1,0 +1,62 @@
+<html>
+ <head>
+	 
+
+	 
+
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+	 <script src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+
+ 
+ 
+ 
+ <title>test</title>
+ 
+ <style>
+
+ 
+ </style>
+ </head>
+ <body>
+  
+
+
+ 	
+ <script>
+	 
+	 $(document).ready(function() {
+		 
+		 console.log("ready");
+              
+                var SDK=lpTag.agentSDK;
+                SDK.init();
+		 
+
+              
+                var onSuccess = function(data) {
+			
+
+		  
+
+                };
+                
+                var onError = function(data) {
+                  console.log("Error");
+                };
+                
+             
+                SDK.get('authenticatedData.customerDetails.customerId', onSuccess, onError);               
+              
+            });
+
+	
+ 
+  </script>
+	  
+	 
+ 
+</body>
+  
+
+  
+</html>
